@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": false,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "baseUrl": "."
+    // "paths": {
+    //   "features/*": ["src/features/*"],
+    //   "src/*": ["src/*"],
+    //   "configs/*": ["src/configs/*"],
+    //   "icons/*": ["src/assets/icons/*"],
+    //   "icons": ["src/assets/icons"],
+    //   "images/*": ["src/assets/images/*"],
+    //   "images": ["src/assets/images"],
+    //   "utils": ["src/utils/utils"]
+    // }
+  },
+  "include": ["./src/**/**/*", "src/features/_NEW/redux/.init-state.ts", "src/features/_NEW/redux/.slice.ts", "src/features/_NEW/redux/.async-thunk.ts"]
+}

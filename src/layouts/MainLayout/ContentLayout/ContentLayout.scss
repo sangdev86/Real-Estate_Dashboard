@@ -1,0 +1,12 @@
+@import '../../../assets/styles/main.scss';
+#content-component {
+  position: relative;
+  .content-body {
+    margin: 20px 0;
+    height: 100%;
+  }
+
+  .content-footer {
+    // position: absolute;
+  }
+}

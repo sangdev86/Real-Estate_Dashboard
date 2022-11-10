@@ -1,0 +1,57 @@
+@import '../../../assets/styles/main.scss';
+#navigation-wrapper {
+  height: 100px;
+  #navigation {
+    margin: 20px 0;
+    border-radius: 8px;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    transition: $all-300;
+    &.width-sidebar-on {
+      width: calc(100% - #{$wsbw-on});
+      @include breakpoint(tablet) {
+        width: 100% !important;
+      }
+    }
+    &.width-sidebar-off {
+      width: calc(100% - #{$wsbw-off});
+      @include breakpoint(tablet) {
+        width: 100% !important;
+      }
+    }
+
+    &.navigation-no-scroll {
+      background-color: transparent !important;
+      .MuiTypography-root {
+        color: rgba(0, 0, 0, 0.54) !important;
+        font-size: 2rem;
+      }
+      .MuiButtonBase-root {
+        &:hover {
+          background-color: $secondary-color;
+          box-shadow: $box-shadow-dark;
+        }
+      }
+    }
+    &.navigation-scroll {
+      background-color: $secondary-color;
+      box-shadow: $box-shadow-dark;
+      .MuiTypography-root {
+        color: rgba(0, 0, 0, 0.74) !important;
+        font-size: 2rem;
+      }
+      .MuiButtonBase-root {
+        &:hover {
+          background-color: $body-bg;
+          box-shadow: $box-shadow-dark;
+        }
+      }
+    }
+  }
+}
+// .css-nljvpr-MuiButtonBase-root-MuiIconButton-root {
+//   &:hover {
+//     background-color: black !important;
+//   }
+// }

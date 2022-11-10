@@ -1,0 +1,40 @@
+#form-custom {
+  // margin: 10px 0 !important;
+  width: 100%;
+  .tittle-form {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    padding-bottom: 30px;
+  }
+  .wrapper-input {
+    overflow-y: scroll;
+    max-height: 80vh;
+    padding: 0 20px;
+    &::-webkit-scrollbar-track {
+      display: none;
+    }
+
+    &::-webkit-scrollbar {
+      width: 2px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      padding-left: 20px;
+      border-radius: 10px;
+      width: 2px;
+      background-color: rgba(224, 224, 224, 0.801);
+      height: 100px;
+    }
+  }
+  .input-grid {
+    margin: 8px;
+    .transparent-validator {
+      color: transparent !important;
+      user-select: none;
+    }
+    .submit {
+      margin-top: 10px;
+    }
+  }
+}

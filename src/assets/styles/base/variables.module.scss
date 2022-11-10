@@ -1,0 +1,52 @@
+$base-color: #e63946;
+$base-bg: rgb(244, 244, 244);
+$facebook-bg: #3b5998;
+
+$icon-profile: #ffd166;
+$icon-wallet: #e63946;
+
+$white-color: #ffffff;
+$link-color: #333333;
+$nav-color: #3d464d;
+$border-color: #efefef;
+
+$base-font: 1.4rem;
+$header-font: 18px;
+
+$primary-color: rgb(246, 83, 101);
+$secondary-color: rgb(253, 253, 253);
+$text-primary-color: rgb(90, 90, 90);
+$text-secondary-color: rgb(255, 255, 255);
+$body-bg-white: rgb(253, 253, 253);
+$body-bg: rgb(251, 246, 240);
+$input-bg: rgba(251, 246, 240, 0.3);
+$progress-color: rgba($primary-color, 0.85);
+$over-lay: rgba(0, 0, 0, 0.1);
+$font-family: 'Roboto', sans-serif;
+$text-font-size: 1.6rem !important;
+$input-font-size: 1.6rem !important;
+$label-font-size: 1.6rem !important;
+$box-shadow-dark: 0 1px 1rem rgba(0, 0, 0, 0.2);
+$all-300: all 0.3s;
+$border-radius-1: 12px;
+$gutter: 20px;
+$wsb-on: 250px;
+$wsb-off: 100px;
+$wsbw-on: $wsb-on + $gutter;
+$wsbw-off: $wsb-off + $gutter;
+
+:export {
+  primary: $primary-color;
+  secondary: $secondary-color;
+  bodyBg: $body-bg;
+  inputBg: $input-bg;
+  fontfamily: $font-family;
+  textFontSize: $text-font-size;
+  inputFontSize: $input-font-size;
+  labelFontSize: $label-font-size;
+  disableButton: rgba(246, 83, 102, 0.7);
+  progressColor: $progress-color;
+  boxShadowDark: $box-shadow-dark;
+  borderRadius1: $border-radius-1;
+  all300: $all-300;
+}

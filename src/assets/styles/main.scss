@@ -1,0 +1,58 @@
+@import './base/index.scss';
+
+@mixin size($size) {
+  width: $size;
+  height: $size;
+}
+
+@mixin abs-pos {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  text-decoration: none;
+}
+html {
+  font-size: 62.5%;
+}
+
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  // overflow-x: hidden;
+}
+
+body {
+  font-size: $base-font;
+  font-family: $font-family;
+  letter-spacing: 0.8px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  min-height: 100vh;
+  background-color: $body-bg;
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 1px;
+    // background: linear-gradient(to right, $red 0%, #ffffff 100%);
+  }
+
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+}
+.css-1eghx7i-MuiPaper-root-MuiMenu-paper-MuiPaper-root-MuiPopover-paper {
+  transition: $all-300 !important;
+}

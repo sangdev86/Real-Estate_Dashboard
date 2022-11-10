@@ -1,0 +1,179 @@
+@import '../../../assets/styles/main.scss';
+
+.wrapper-sidebar {
+  .wrapper-item {
+    background-color: $secondary-color;
+    box-shadow: $box-shadow-dark;
+    margin: #{$gutter} 0 #{$gutter} #{$gutter};
+    height: calc(100vh - 2 * #{$gutter});
+    border-radius: $border-radius-1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: $all-300;
+    font-size: 1.6rem;
+    font-weight: bold;
+    z-index: 999;
+    .menu-list {
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      padding: 10px 0;
+      .menu-item-wrapper {
+        cursor: pointer;
+        overflow: hidden;
+
+        .menu-item {
+          color: $text-primary-color;
+          font-size: 1.6rem;
+        }
+        .sub-item {
+          color: $text-primary-color;
+          font-size: 1.6rem;
+          display: flex;
+          padding: 15px 0 15px 54px;
+          align-items: center;
+          &:hover {
+            transition: $all-300;
+            color: $primary-color;
+          }
+          .title-sub {
+            display: block;
+            white-space: nowrap;
+          }
+        }
+        &.active {
+          .menu-item {
+            color: $primary-color;
+            border-right: 3px solid $primary-color;
+            color: $primary-color;
+          }
+          .sub-item.active {
+            color: $primary-color;
+            background-color: $body-bg;
+          }
+        }
+        &:hover {
+          .menu-item {
+            color: $primary-color;
+          }
+        }
+      }
+    }
+    &.on {
+      width: $wsb-on;
+      .img-logo {
+        height: 65px;
+        width: 100%;
+        background-image: url(./../../../assets/image/logo/logo1.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+      }
+
+      .menu-list {
+        .menu-item-wrapper {
+          .menu-item {
+            display: flex;
+            padding: 15px;
+            align-items: center;
+
+            .icon-item {
+              margin: 0 8px 0 0;
+            }
+            .title-item {
+              display: block;
+              white-space: nowrap;
+            }
+          }
+        }
+      }
+    }
+    &.off {
+      .img-logo {
+        height: 65px;
+        width: 100%;
+        background-image: url(./../../../assets/image/logo/logo2.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+        display: flex;
+      }
+      width: $wsb-off;
+      .menu-list {
+        .menu-item-wrapper {
+          position: relative;
+          overflow: visible;
+          &:hover {
+            .sub-wrapper {
+              display: block;
+            }
+          }
+          .menu-item {
+            display: flex;
+            padding: 15px 35px;
+            align-items: center;
+            .icon-item {
+              margin: 0;
+            }
+            .title-item {
+              display: none;
+              white-space: nowrap;
+            }
+          }
+          .sub-wrapper {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: $wsb-off;
+            background-color: $body-bg-white;
+            border-radius: 8px !important;
+            box-shadow: $box-shadow-dark;
+            .sub-item {
+              padding-left: 30px;
+              padding-right: 30px;
+            }
+          }
+        }
+      }
+    }
+    @include breakpoint(tablet) {
+      &.on,
+      &.off {
+        width: $wsb-on;
+        .icon-item {
+          margin: 0 8px 0 0 !important;
+        }
+        .title-item {
+          display: block !important;
+        }
+      }
+    }
+
+    .divider-sidebar {
+      flex-shrink: 0;
+      border-width: 0;
+      border-style: solid;
+      border-color: rgba(0, 0, 0, 0.08);
+      border-bottom-width: thin;
+      background-color: transparent;
+      background-image: linear-gradient(
+        to right,
+        rgba(52, 71, 103, 0),
+        rgba(52, 71, 103, 0.4),
+        rgba(52, 71, 103, 0)
+      ) !important;
+      height: 0.2rem;
+      margin: 1rem 0;
+      border-bottom: none;
+      opacity: 0.25;
+      background-color: transparent;
+      background-image: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0),
+        $primary-color,
+        rgba(255, 255, 255, 0)
+      ) !important;
+    }
+  }
+}

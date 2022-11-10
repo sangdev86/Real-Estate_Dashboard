@@ -1,0 +1,13 @@
+# 2021-2022
+
+# YARN
+
+# 18 > REACT > 16.3
+
+# REACT TS
+
+# MUI CONFIG THEME OVERDRING
+
+# REDUX TOOL KIT
+
+# SASS version old
